@@ -1,0 +1,44 @@
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 25px;
+    margin-bottom: 150px;
+    z-index: 10;
+}
+
+.loading_count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #A2A3A4;
+    height: 44px;
+    min-width: 77px;
+}
+
+.down {
+    width: 24px;
+    height: 29px;
+    align-self: flex-end;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 24px solid #C4C4C4;
+}
+
+.down:hover {
+    border-top: 24px solid #989898;
+    cursor: pointer
+}
+
+.chose_count div {
+    padding-left: 10px;
+    border: 1px solid #A2A3A4;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.chose_count div:hover {
+    background-color: #636363;
+    color: #fff
+}
