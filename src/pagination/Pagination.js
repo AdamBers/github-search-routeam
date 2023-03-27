@@ -1,6 +1,6 @@
 import { React, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { setLoadingCount } from '../redux/projectSlice';
+import { fetchCards, setLoadingCount } from '../redux/projectSlice';
 import './pagination.css'
 
 export default function Pagination() {
@@ -19,6 +19,7 @@ export default function Pagination() {
 
     const handleClick = (count) => {
         dispatch(setLoadingCount(count))
+        dispatch(fetchCards())
         setIsHovering(false)
     }
     return (

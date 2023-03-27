@@ -1,14 +1,13 @@
 .card {
     display: inline-block;
-    width: calc(33.33% - 20px);
+    width: calc(100% - 20px);
     min-height: 200px;
     min-width: 290px;
-    margin: 10px;
+    margin: 10px 0;
     padding: 15px;
     border: 1px solid #A2A3A4;
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
 }
 
 .card-title {
@@ -18,12 +17,26 @@
     font-size: 20px;
     line-height: 23px;
     margin-bottom: 18px;
+    max-height: 23px;
+    overflow: hidden;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+a:hover {
+    color: #039cbf
 }
 
 .card-author {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    overflow: hidden;
+
 }
 
 .card-status {
@@ -46,17 +59,21 @@
 .star-img {
     width: 25px;
     height: 25px;
-    background-size: 100% 100%;
     margin-right: 18px;
-    background: url('../../assets/img/star.png');
+    font-size: 25px;
+    line-height: 25px;
+    /* background: url('../../assets/img/star.png'); */
+
 }
+
 
 .eye-img {
     width: 25px;
     height: 25px;
-    background-size: 100% 100%;
     margin-right: 18px;
-    background: url('../../assets/img/eye.png');
+    /* background: url('../../assets/img/eye.png'); */
+    font-size: 25px;
+    line-height: 25px;
 }
 
 .card-edit {
@@ -87,9 +104,19 @@
     border-radius: 0 7px 7px 0;
 }
 
+.more {
+    text-align: left;
+}
+
 @media(min-width: 320px) {
     .card {
-        width: 100%;
+        width: calc(100% - 20px);
+    }
+}
+
+@media(min-width: 400px) {
+    .card {
+        margin: 10px
     }
 }
 

@@ -10,11 +10,12 @@ const initialState = {
     error: ''
 }
 
-export const fetchCards = createAsyncThunk('search/searchcards', (userInput, loadingCount) => {
+export const fetchCards = createAsyncThunk('search/searchcards', async (obj) => {
     return axios
-        .get(`https://api.github.com/search/repositories?q=${userInput}&per_page=${loadingCount}`)
+        .get(`https://api.github.com/search/repositories?q=${obj.userInput}&per_page=100`)
         .then(response => response.data)
 })
+
 
 export const projectSlice = createSlice({
     name: 'search',
@@ -40,6 +41,9 @@ export const projectSlice = createSlice({
         })
     }
 })
+
+
+
 
 // Action creators are generated for each case reducer function
 export const { search, setLoadingCount } = projectSlice.actions

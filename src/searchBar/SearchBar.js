@@ -1,17 +1,18 @@
 import { React, useState } from 'react'
 import { fetchCards } from '../redux/projectSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import "./searchBar.css"
 
 export default function SearchBar() {
     const [userInput, setUserInput] = useState('')
     const dispatch = useDispatch()
+    const loadingCount = useSelector(state => state.search.loadingCount)
 
     function handleSearch() {
         if (userInput.length < 3) {
             alert("tooShort")
         } else {
-            dispatch(fetchCards(userInput))
+            dispatch(fetchCards({ userInput: userInput, loadingCount: loadingCount }))
         }
     }
 
