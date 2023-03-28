@@ -42,3 +42,58 @@
     background-color: #636363;
     color: #fff
 }
+
+.pagination-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 20px;
+    border: 1px solid #A2A3A4;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.left-arrow {
+    display: inline-block;
+    width: 20px;
+    height: 44px;
+    background: url('../../assets/img/left.png');
+    background-size: 100% 100%;
+    margin-right: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.right-arrow {
+    display: inline-block;
+    width: 20px;
+    height: 44px;
+    background: url('../../assets/img/right.png');
+    background-size: 100% 100%;
+    margin-right: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.right-arrow:hover, .left-arrow:hover, .pagination-button:hover {
+    background-color: #989898;
+}
+
+.center {
+    display: flex;
+}
+
+.right {
+    width: 77px;
+}
+
+.active {
+    background-color: #636363;
+}
+
+@media(min-width:375px) {
+    .right-arrow, .left-arrow, .pagination-button {
+        width: 30px;
+    }
+}

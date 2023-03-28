@@ -42,4 +42,5 @@
     background: url(/assets/img/search-icon.png);
     background-size: 100% 100%;
     border: none;
+    cursor: pointer;
 }
